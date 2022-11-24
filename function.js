@@ -102,3 +102,20 @@ return [modulo,division,product,sum]
 }
 
 console.log(all(23,8))
+
+
+// conditionals -->
+function foo(num){
+
+    if (num==2 ){
+        console.log("yea the number is 2")
+
+    }else{
+        console.log("no its not 2")
+    }
+
+
+
+
+}
+foo(20);
