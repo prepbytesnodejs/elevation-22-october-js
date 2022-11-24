@@ -1,4 +1,5 @@
 // function definition
+"use strict";
 
 var k=9;
 ///
@@ -18,7 +19,7 @@ return sum;
    
 }
 // function call
-console.log(foo());
+//console.log(foo());
 
 
 // with help of function 
@@ -43,13 +44,48 @@ console.log(pro);
 
 
 }
-productofAll(2,3);  // arguments
-productofAll(8,9);
-productofAll(7,8)
+//productofAll(2,3);  // arguments
+//productofAll(8,9);
+//productofAll(7,8)
 
 
 
 // Write a function that calculates the sum of 2 numbers
+
+function sumofTwoNumbers(a,b){
+   
+
+    var  sum=a+b;
+    return sum;
+
+}
+//var output=sumofTwoNumbers(3,4);
+//console.log(output);
+//console.log(sumofTwoNumbers(3,4));
+
 // product of two numbers
+
+function productofTwoNumbers(a,b){
+   
+
+    var  product=a*b;
+    return product;
+
+}
 // divison of two numbers
+
+function divisionofTwoNumbers(a,b){
+   
+
+    var  division=a/b;
+    return division;
+
+}
 // modulo of two numbers
+function modulofTwoNumbers(a,b){
+   
+
+    var  modulo=a%b;
+    return modulo;
+
+}
