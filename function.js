@@ -101,7 +101,7 @@ function all(a,b){
 return [modulo,division,product,sum]
 }
 
-console.log(all(23,8))
+//console.log(all(23,8))
 
 
 // conditionals -->
@@ -118,4 +118,72 @@ function foo(num){
 
 
 }
-foo(20);
+//foo(20);
+
+// fizzbuzz problem ---> . % operator 
+
+// 4%2 . -->0
+
+// you have to write a function that accepts a number 
+// if the number you passed is divisble by 3 you have to print fizzz
+// if the number is divisible by 5 you have to rpint buzz
+// if the number is divisible by both 3 and 5 you have to print fizz buzz 
+
+// && 
+
+
+
+
+function fizBuzz(num){
+
+    if(num%3==0)
+    {
+        console.log("fizz")
+    }
+    if(num%5==0)
+    {
+        console.log("buzz")
+    }
+    if(num%3==0 && num%5==0)
+    {
+        console.log("fizz buzz")
+    }
+    
+
+
+
+}
+
+function fizBuzz2(num){
+
+   if(num%3==0 && num%5==0)
+    {
+        console.log("fizz buzz")
+    }
+
+    else if(num%3==0)
+    {
+        console.log("fizz")
+    }
+    else if(num%5==0)
+    {
+        console.log("buzz")
+    }else{
+        console.log("no divisor found")
+
+    }
+ 
+    ///---
+
+
+
+}
+
+//fizBuzz(9);
+//fizBuzz(10);
+fizBuzz2(15);
+fizBuzz2(25);
+fizBuzz2(9);
+fizBuzz2(19);
+
+
