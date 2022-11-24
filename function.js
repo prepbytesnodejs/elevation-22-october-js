@@ -89,3 +89,16 @@ function modulofTwoNumbers(a,b){
     return modulo;
 
 }
+
+function all(a,b){
+    var  modulo=a%b;
+    var  division=a/b;
+    var  product=a*b;
+    var  sum=a+b;
+
+
+
+return [modulo,division,product,sum]
+}
+
+console.log(all(23,8))
