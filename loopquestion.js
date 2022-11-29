@@ -120,3 +120,38 @@ function checkPrime(num){
     }
     
     printeven()
+
+
+    function pattern(){
+  
+        for(let i=0;i<4;i++){
+          let str="";
+          for(let j=0;j<4;j++){
+            str=str+"*"
+        }
+          console.log(str);
+          console.log("")
+        }
+      }
+        pattern(4)
+
+
+
+        const pattern_one = () => {
+            let string = "";
+            for(let i=1;i<=4; i++ ) {
+                for(let j =1;j<=4; j++) {
+                    string += "*";
+                }
+                string += "\n";
+            }
+        
+            console.log(string)
+        }
+
+        
+        let num=1;
+let num2=2;
+
+console.log(num | num2);
+console.log(num & num2);
