@@ -37,16 +37,12 @@ function checkPrime(num){
 
 // To check whether the number is prime or not ?
 function checkPrime(num){
-
     if (num==0){
       return false;
-    }
-      else if (num==1){
+    }else if (num==1){
         return true;
-      }
-      else{
-    
-        // run our for loop 
+      }else{
+    // run our for loop 
         for (let i=2;i<num;i++){
     
           if(num%i==0){
@@ -63,6 +59,67 @@ function checkPrime(num){
     
       
     }
+
+
+
+
+    function checkPrime(num){
+      if (num==0){
+        return false;
+      }else if (num==1){
+          return true;
+        }else{
+      // run our for loop 
+          for (let i=2;i<num;i++){
+      
+            if(num%i==0){
+              return false
+            }
+            
+          }
+      
+          
+        }
+      
+      
+        return true
+      
+        
+      }
+  
+  
+  
+  let arr=[1,19,23,2,12,17 ];
+  
+  /*
+  let primeArray=arr.filter(function(data){
+  
+    if(checkPrime(data))
+    {
+      return data;
+    }
+  
+  
+    
+  })
+  */
+  
+  let primeArray=arr.map(function(data){
+  
+    if(checkPrime(data))
+    {
+      return data;
+    }
+  
+  
+    
+  })
+  
+  console.log(primeArray)
+  
+  // map gives you the array which is of same length as of original array 
+  
+  // filter gives you the array which may be less than or equal to the length of original array 
     
     
     // we have to print all the prime numbers from 0 -100
