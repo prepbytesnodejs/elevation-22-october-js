@@ -12,16 +12,17 @@
 
     <div class="row">
         <h1 style="text-align: center;">To do List Application</h1>
-        <div class="col-6 offset-3">
+        <div class="col-6 offset-3" id="div">
             <input type="text" class="form-control" id="input"/>
 
             <button class="btn btn-success" id="btn">
                 Add ToDo
             </button>
 
-            <ul id="list">
+            <ol id="list">
 
-            </ul>
+            </ol>
+       
 
         </div>
 
@@ -36,15 +37,34 @@
         let value=inputElement.value;
 
         // Creat element in js 
-        let li=document.createElement("li");
-        li.innerText=value;
-        list.appendChild(li);
+        let liElement=document.createElement("li"); // it creates dom element
+      
+       // liElement.innerText=value;
+       //liElement.innerHTML=value+'<button type="button" class="btn btn-info">Info</button>'
+       // template literals syntax
+
+       liElement.innerHTML=`${value} <button type="button" class="btn btn-info">Delete</button>`
+       liElement.addEventListener("click",function(event){
+      //event.target actually gives us the exact element on which the inteaction  has happened by the user
+
+      list.removeChild(event.target);
+
+       })
+        list.appendChild(liElement);
 
 
 
 
 
     })
+
+    // selectt the button and add the listener
+
+    // div select
+  //  let divElment=document.getElementById("div");
+   // console.log(divElment.innerHTML); // inner html will give you all the html  
+
+   // console.log(divElment.innerText);  // will return only text content ,it will strip off ,it will not give you the html elements
 
 </script>
 
