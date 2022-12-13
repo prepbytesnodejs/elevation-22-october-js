@@ -30,6 +30,9 @@
 
 <script>
 
+  
+
+
     let btnElement=document.getElementById("btn");
     let inputElement=document.getElementById("input");
     let list=document.getElementById("list");
@@ -42,26 +45,34 @@
        // liElement.innerText=value;
        //liElement.innerHTML=value+'<button type="button" class="btn btn-info">Info</button>'
        // template literals syntax
-
-       liElement.innerHTML=`${value} <button type="button" class="btn btn-info">Delete</button>`
+   
+       liElement.innerHTML=`${value} <button type="button"   class="btn btn-info">Delete</button> <button type="button"    class="btn btn-info">Edit</button>`
        liElement.addEventListener("click",function(event){
       //event.target actually gives us the exact element on which the inteaction  has happened by the user
-       //console.log(event.target.tagName);
+       console.log(event.target.innerText);
+       console.log(event.target.tagName);
      // list.removeChild(event.target);
     // if(event.target.tagName)
-    if(event.target.tagName=="BUTTON"){
+    if(event.target.tagName=="BUTTON" && event.target.innerText=="Delete" ){
+
+
         // it will return the parent element of event.target
         let parentElement=event.target.parentElement
            // then only i will perform the delete operation
         //console.log(parentElement)
-         list.removeChild(parentElement);  // remove Child works only for child element 
+        list.removeChild(parentElement);  // remove Child works only for child element 
+    }else if(event.target.tagName=="BUTTON" && event.target.innerText=="Edit" ){
+
+        
+
     }
 
+ 
        })
         list.appendChild(liElement);
 
 
-
+        inputElement.value="";
 
 
     })
