@@ -46,8 +46,16 @@
        liElement.innerHTML=`${value} <button type="button" class="btn btn-info">Delete</button>`
        liElement.addEventListener("click",function(event){
       //event.target actually gives us the exact element on which the inteaction  has happened by the user
-
-      list.removeChild(event.target);
+       //console.log(event.target.tagName);
+     // list.removeChild(event.target);
+    // if(event.target.tagName)
+    if(event.target.tagName=="BUTTON"){
+        // it will return the parent element of event.target
+        let parentElement=event.target.parentElement
+           // then only i will perform the delete operation
+        //console.log(parentElement)
+         list.removeChild(parentElement);  // remove Child works only for child element 
+    }
 
        })
         list.appendChild(liElement);
