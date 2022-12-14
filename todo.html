@@ -33,9 +33,11 @@
   
 
 
-    let btnElement=document.getElementById("btn");
+    let btnElement=document.getElementById("btn"); // this is selecting the element from dom object on the basis of id
     let inputElement=document.getElementById("input");
     let list=document.getElementById("list");
+
+    // We are adding the data --->
     btnElement.addEventListener("click",function(){
         let value=inputElement.value;
 
@@ -62,6 +64,25 @@
         //console.log(parentElement)
         list.removeChild(parentElement);  // remove Child works only for child element 
     }else if(event.target.tagName=="BUTTON" && event.target.innerText=="Edit" ){
+
+        let parentElement=event.target.parentElement
+        let str=parentElement.innerText;
+        let strarray=str.split(" ");// we have to remove last two elements from array 
+       inputElement.value=strarray.slice(0,-2).join(" ");
+
+       btnElement.innerText="Edit Todo"
+
+       btnElement.addEventListener("click",function(){
+
+        // We can just edit the data ---->
+
+
+        // specifically for edit
+       })
+
+
+
+
 
         
 
