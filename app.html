@@ -9,6 +9,14 @@
 <body>
     <h1 id="heading">The Js class</h1>
 
+    <select id="select" >
+        <option value="1">One </option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="5">Five</option>
+        <option value="6">Six</option>
+    </select>
+
     <button id="button">
         Change the color of the Heading
     </button>
@@ -18,8 +26,35 @@
         <h1>Please turn on your js</h1>
 
     </noscript>
-    
+
+    <script>
+
+        let select=document.getElementById("select");
+
+        select.addEventListener("change",function(event){
+            console.log(event.target.value);
+            //event.target -->it gets you the targeted element
+            //event.target.selectedOptions will give you the collection of all the options that you have
+
+            // selected
+            console.log(event.target.selectedOptions[0].text);
+
+
+
+
+
+        })
+
+
+
+
+        
+
+    </script>
+   <!--
 <script src="dom.js"></script>
+   --> 
+
 
 </body>
 </html>
