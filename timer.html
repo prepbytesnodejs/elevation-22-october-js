@@ -19,7 +19,7 @@
 
         let btn=document.getElementById("btn");
         let timer=document.getElementById("timer");
-
+/*
         function timerFunction(){
             let date=new Date();
             let hours=date.getHours();
@@ -39,6 +39,28 @@
             },1000)
 
     })
+    */
+
+    //
+
+    function timerFunction(){
+            let date=new Date();
+            let hours=date.getHours();
+            let minutes=date.getMinutes();
+            let seconds=date.getSeconds();
+
+         //   timer.innerText=
+
+         timer.innerText=  `${hours}:${minutes}:${seconds}`
+
+        }
+       // timerFunction()
+    //setInterval(timerFunction,1000) . // not a right approach
+/*
+    setInterval(()=>{
+        timerFunction()
+    },1000)
+    */
 
 
     </script>
